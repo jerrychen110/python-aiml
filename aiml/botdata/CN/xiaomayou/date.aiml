@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<!-- -->
+<!-- Free software (c) 2019 cc -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+<!-- Last modified 19/07/2019 -->
+<!-- -->
+<category><pattern>今年是什么年</pattern>
+<template><date format="%Y"/>.</template>
+</category>
+<category><pattern>今年是 * 年</pattern>
+<template><date format="%Y"/>.</template>
+</category>
+<category><pattern>当前年份 *</pattern>
+<template><date format="%Y"/>.</template>
+</category>
+<category><pattern>当前月份 *</pattern>
+<template><date format="%B"/>.</template>
+</category>
+<category><pattern>当前时间 *</pattern>
+<template><date format="%I %p"/>.</template>
+</category>
+<category><pattern>今天是星期一 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期二 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期三 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期四 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期五 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期六 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+<category><pattern>今天是星期天 *</pattern>
+<template>今天是<date format="%A"/>.</template>
+</category>
+</aiml>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Free software (c) 2019 cc -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="cc"/>
+<meta name="language" content="zh"/>
+
+<category><pattern>测试 *</pattern>
+<template><think><set name="botname"><star/></set></think>
+<get name="botname"/>功能正常.
+</template>
+</category>
+
+<category><pattern>你好 *</pattern>
+<template>HELLO</template>
+</category>
+
+<category><pattern>再见 *</pattern>
+<template>BYE</template>
+</category>
+
+<category><pattern>谢谢 *</pattern>
+<template><random>
+<li>不客气.</li>
+<li>你太客气了.</li>
+<li>没关系.</li>
+</random></template>
+</category>
+
+<category><pattern>BYE *</pattern>
+<template><random>
+<li>再见<get name="name"/>.</li>
+<li>再见啦, <get name="name"/>.</li>
+<li>下次见, <get name="name"/>.</li>
+<li>谢谢你陪我聊天, <get name="name"/>.</li>
+<li>改天见, <get name="name"/>.</li>
+</random></template>
+</category>
+
+<category><pattern>我叫 *</pattern>
+<template><think><set name="username"><star/></set></think>
+你好<get name="username"/>
+</template>
+</category>
+
+<category><pattern>小麻油是什么</pattern>
+<template><srai>是机器人</srai>
+</template>
+</category>
+
+<category><pattern>谁是小麻油</pattern>
+<template>我是
+</template>
+</category>
+
+<category><pattern>我是小麻油</pattern>
+<template><srai>你不是小麻油,我是小麻油</srai>
+
+</template>
+</category>
+
+<category><pattern>你知道小麻油吗</pattern>
+<template><srai>小麻油是机器人</srai><!-- REDUCTION --></template>
+</category>
+
+<category><pattern>有两个小麻油</pattern>
+<template>是的
+</template>
+</category>
+
+<category><pattern>为什么你叫小麻油</pattern>
+<template><srai>因为我喜欢</srai>
+ </template>
+</category>
+
+<category><pattern>你会 *</pattern>
+<template><srai>我会 <star/></srai></template>
+</category>
+
+<category><pattern>你几岁</pattern>
+<template><srai>我自己也不知道</srai></template>
+</category>
+
+<category><pattern>你会什么</pattern>
+<template>我啥都会<sr/></template>
+</category>
+
+<category>
+<pattern>现在几点了</pattern>
+<template>
+<srai>TIME</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 天气</pattern>
+<template>
+<system>sudo python getweather.py realtime <star /></system>
+</template>
+</category>
+
+</aiml>

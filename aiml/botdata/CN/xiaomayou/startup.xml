@@ -1,0 +1,13 @@
+<aiml version="1.0">
+
+<category>
+<pattern>LOAD AIML CN</pattern>
+<template>
+
+<!-- Load ALICE AIML set -->
+<learn>chat.aiml</learn>
+
+</template>
+</category>
+
+</aiml>
