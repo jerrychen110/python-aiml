@@ -15,7 +15,7 @@ k.learn("startup.xml")
 # to a user's input string.  respond() returns
 # the interpreter's response, which in this case
 # we ignore.
-k.respond("load aiml cn")
+k.respond("load xiaomayou")
 
 # Loop forever, reading user input from the command
 # line and printing responses.
