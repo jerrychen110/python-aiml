@@ -16,16 +16,14 @@ ENCODING = 'utf-8'
 
 # 武汉天气
 def queryLocation(term):
-    term = term.encode(ENCODING) if type(term) == unicode else term
+    # term = term.encode(ENCODING) if type(term) == unicode else term
     # print(term)
     url = "http://toy1.weather.com.cn/search?cityname=" + term
-    print(url)
     resp = urllib.urlopen(url)
     result = resp.read()[1:-1]
     data = json.loads(result)
-    print(data)
     if not data:
-        print u"找不到地点".encode(ENCODING)
+        print(u"找不到地点".encode(ENCODING))
     for d in data:
         ref = d["ref"]
         ref_code = ref.split("~")
@@ -39,7 +37,7 @@ def queryRealTimeWeatherInfo(code):
     resp = urllib.urlopen(url)
     data = json.load(resp)
     if not data:
-        print u"天气预报还没出来".encode(ENCODING)
+        print(u"天气预报还没出来".encode(ENCODING))
     return data['weatherinfo']
 
 def showRealTimeWeatherInfo(info):
