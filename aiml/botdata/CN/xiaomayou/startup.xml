@@ -1,11 +1,11 @@
 <aiml version="1.0">
 
 <category>
-<pattern>LOAD AIML CN</pattern>
+<pattern>LOAD XIAOMAYOU</pattern>
 <template>
 
-<!-- Load ALICE AIML set -->
-<learn>chat.aiml</learn>
+<!-- Load XIAOMAYOU AIML set -->
+<learn>*.aiml</learn>
 
 </template>
 </category>
